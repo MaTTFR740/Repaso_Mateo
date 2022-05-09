@@ -10,16 +10,19 @@ public class Repaso {
 		String respuesta="";
 		
 		System.out.println("¿Existe el multiverso?");
-		respuesta=ent.nextLine();
+		respuesta=ent.nextLine().toUpperCase();
 		
 	
-		
-		if(respuesta.contentEquals("si")) {
-			System.out.println("Correcto, estas listo para el viaje");
-		}else if(respuesta.contentEquals("no")) {
-			System.out.println("Debes meditar más...");
-		}else{
-			System.out.println("¿Eres estúpido?");
+		switch(respuesta){
+			case "SI":
+				System.out.println("Correcto");
+				break;
+			case "NO":
+				System.out.println("Incorrecto");
+				break;
+			default:
+				System.out.println("Piensalo mejor");
+				break;
 		}
 			
 	//Cambia lo que te de la gana del codigo
